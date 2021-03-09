@@ -1,0 +1,76 @@
+body {
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+.container {
+  height: 100%;
+  width:100%;
+  justify-content: space-between;
+}
+
+.button-container{
+  height: 100%;
+  width:100%;
+}
+
+.item {
+  color: #ffffff;
+  font-family: sans-serif;
+  width: 100%;
+  max-width: 300px;
+  max-height: 250px;
+  height: 100%;
+  padding: 1em 1em 1em 1em;
+}
+
+.img-wrapper{
+  background-color: seashell;
+}
+
+.form-container{
+  height: 50%;
+  width: 100%;
+  float:right;
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 300px;
+  max-height: 225px;
+  height: 100%;
+  background-color: seashell;
+}
+
+.input-item{
+  width: 120px;
+}
+
+img {
+  width: auto;
+  height: auto;
+  max-width: 225px;
+  max-height: 225px;
+}
+
+.login-button{
+  width: 128px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.text{
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+}
+
+.error-message{
+  height: 10px;
+  color: red;
+  text-align: center;
+}
+
+
+
+

@@ -1,0 +1,59 @@
+
+<!--
+<div class="container" fxLayout fxLayoutAlign="center center" fxLayoutGap="0px" fxLayout.xs="column">
+  <div class="item img-wrapper" fxLayoutAlign="center center">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png">
+  </div>
+  <div class="item login-wrapper" fxLayoutAlign="center center" fxLayout="column" fxLayoutGap="10px">
+    <form fxLayout="column" fxLayoutAlign="center center">
+        <div class="container" fxLayout="row" fxLayoutGap="10px" fxLayout.xs="column">
+          <div class="text-center">
+            E-Mail:
+          </div>
+          <input placeholder="">
+        </div>
+        <div class="container" fxLayout="row" fxLayoutGap="10px" fxLayout.xs="column" color="black">
+          <div class="text-center">
+            Passwort:
+          </div>
+          <input placeholder="">
+        </div>
+      <button class="login-button">Login</button>
+    </form>
+  </div>
+</div>-->
+
+<div class="container" fxLayout fxLayoutAlign="center center" fxLayoutGap="0px" fxLayout.xs="column">
+
+  <div class="item img-wrapper" fxLayoutAlign="center center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png">
+  </div>
+  <div class="item login-wrapper" fxLayout="column" fxLayoutAlign="center center">
+    <form fxLayout="column" fxLayoutGap="10px">
+      <div class="container" fxLayout="row" fxLayoutGap="10px" fxLayout.xs="column">
+        <div class="text">
+          E-Mail:
+        </div>
+        <input #e_mail id="e_mail" class="input-item" placeholder="" name="e_mail" >
+      </div>
+      <div class="container" fxLayout="row" fxLayoutGap="10px" fxLayout.xs="column">
+        <div class="text">
+          Passwort:
+        </div>
+        <div>
+          <input #password id="password" class="input-item" type="password" name="password" >
+        </div>
+      </div>
+      <div class="container" fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center end">
+        <div fxLayout="column" fxLayoutAlign="end center" fxLayoutGap="10px">
+          <div>
+            <button class="login-button" (click)="validateCredentials(password.value, e_mail.value)">Login</button>
+          </div>
+          <div class="text error-message">
+            {{message}}
+          </div>
+        </div>
+      </div>
+  </form>
+  </div>
+</div>

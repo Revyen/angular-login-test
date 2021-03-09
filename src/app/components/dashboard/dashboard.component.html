@@ -1,0 +1,16 @@
+<div class="container" fxLayout="column" fxLayoutGap="20px">
+  <div fxLayout="row" fxLayoutGap="20px">
+    <div>
+      <img class="profil-image" src={{user.pic_url}}>
+    </div>
+    <div fxLayout="column" fxLayoutGap="5px">
+      <div>ID: {{user.id}}</div>
+      <div>Name: {{user.vorname}} {{user.nachname}}</div>
+      <div>E-Mail: {{user.e_mail}}</div>
+      <div>Hallo, mein Name ist {{user.vorname}} </div>
+    </div>
+  </div>
+  <div fxLayoutAlign="end end">
+    <button style="height: 40px; width: 100;" routerLink="/login">Logout</button>
+  </div>
+</div>
