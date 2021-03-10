@@ -12,19 +12,12 @@ export class UserService {
   constructor() { }
 
   validateCredetials(e_mail: string, password: string): Observable<User> {
-    const User = of(USERS.find(user => user.e_mail == e_mail && user.password == password));
-    return User;
+    this.user = USERS.find(user => user.e_mail == e_mail && user.password == password)
+    const Observer = of(this.user);
+    return Observer;
   }
 
-  setUser(user: User){
-    this.user = user;
-  }
-
-  getUser(){
-    return this.user;
-  }
-
-  getFirst(){
-    return USERS[0];
+  getUser(): Observable<User>{
+    return of(this.user);
   }
 }

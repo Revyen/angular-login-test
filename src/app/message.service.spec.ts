@@ -13,4 +13,12 @@ describe('MessageService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('Post new Error-Message',() => {
+    let testString: string;
+    testString = 'this is a test message'
+    service.updateMessage(testString);
+
+    expect(service.message).toEqual(testString);
+  });
 });

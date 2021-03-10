@@ -13,7 +13,6 @@ import { AppComponent } from 'src/app/app.component';
   styleUrls: ['./log-in.component.css']
 })
 export class LogInComponent implements OnInit {
-  User?: User;
   message: string = '';
 
   constructor( private userService: UserService,
@@ -22,17 +21,16 @@ export class LogInComponent implements OnInit {
                private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.User = undefined;
   }
 
   validateCredentials(password:string, e_mail:string){
-    this.userService.validateCredetials(e_mail,password).subscribe(user => this.User = user)
-    if(this.User == undefined){
+    let User: User;
+    this.userService.validateCredetials(e_mail,password).subscribe(user => User = user)
+    if(User == undefined){
       this.messageService.updateMessage("Login ungültig");
     }
     else
     {
-      this.userService.setUser(this.User);
       this.router.navigate(['/dashboard']);
       this.messageService.updateMessage("Login gültig");
     }

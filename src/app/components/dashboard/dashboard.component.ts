@@ -13,7 +13,7 @@ export class DashboardComponent implements OnInit {
   constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
-    this.user = this.userService.getUser();
+    this.userService.getUser().subscribe(user => this.user = user);
     if(this.user == undefined)
     {
       this.router.navigate(['/login'])
